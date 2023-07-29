@@ -1,0 +1,16 @@
+﻿namespace BasketballTeam.ViewModels.AuthViewModels;
+
+using System.ComponentModel.DataAnnotations;
+using static Common.EntityValidations;
+
+
+public class LoginUserRequestModel
+{
+    [Required]
+    [StringLength(USERNAME_MAX_LENGTH, MinimumLength = USERNAME_MIN_LENGTH)]
+    public string Username { get; set; } = null!;
+
+    [Required]
+    [StringLength(PASSWORD_MAX_LENGTH, MinimumLength = PASSWORD_MIN_LENGTH)]
+    public string Password { get; set;} = null!;
+}
